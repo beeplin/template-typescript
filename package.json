@@ -1,0 +1,40 @@
+{
+  "name": "template-typescript",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "ts-node-dev src",
+    "build": "tsc --build --clean && tsc --build",
+    "start": "node dist",
+    "test": "jest src",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore .",
+    "format": "prettier --write --ignore-path .gitignore .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.3.0",
+    "esbuild": "^0.12.15",
+    "esbuild-jest": "^0.5.0",
+    "eslint": "^7.30.0",
+    "eslint-config-mania": "^0.0.3",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.2",
+    "ts-node-dev": "^1.1.8",
+    "tslib": "^2.3.0",
+    "typescript": "^4.3.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue}": "eslint --fix",
+    "*.{js,jsx,ts,tsx,vue,json,yml,yaml,md,html,css,less,scss,sass,gql,graphql}": "prettier --write"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  }
+}
