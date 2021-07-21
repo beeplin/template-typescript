@@ -25,7 +25,7 @@ module.exports = {
   coverageReporters: [
     // 'json',
     'text',
-    // 'lcov', // 开启了这个就会导致 vscode test explore ui jest plugin 无限 rerun
-    // "clover"
+    // 'lcov', // 会导致 vscode jest 无限循环
+    'clover',
   ],
 }

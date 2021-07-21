@@ -1,3 +1,3 @@
-export function get1() {
+export function get1(): number {
   return 1
 }
